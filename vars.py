@@ -5,6 +5,7 @@ import pygame
 
 
 def load_image(name, colorkey=None):
+    """Загрузка изображения"""
     fullname = os.path.join('data', name)
     # если файл не существует, то выходим
     if not os.path.isfile(fullname):
@@ -22,6 +23,7 @@ def load_image(name, colorkey=None):
 
 
 def load_level(filename):
+    """Загрузка уровня"""
     filename = "data/" + filename
     # читаем уровень, убирая символы перевода строки
     with open(filename, 'r') as mapFile:
